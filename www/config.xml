@@ -6,7 +6,7 @@
         id        = "com.debanjana.phonegap.chat"
         version   = "1.0.0">
 
-    <name>Hello World</name>
+    <name>BoseDebanjana Chat</name>
 
     <description>
         Backend-less chat application
