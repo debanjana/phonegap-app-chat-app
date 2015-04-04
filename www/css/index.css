@@ -47,7 +47,7 @@ body {
 
 /* Portrait layout (default) */
 .app {
-    background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
+   /* background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
     position:absolute;             /* position in the center of the screen */
     left:50%;
     top:50%;
@@ -68,6 +68,17 @@ body {
                                       /* offset horizontal: half of image width and text area width */
     }
 }
+
+chatboxView { 
+    background-color: yellow;
+}
+userName{
+    background-color: red;
+}
+inputMessageBox{
+    background-color: green;
+}
+
 
 h1 {
     font-size:24px;
