@@ -29,9 +29,8 @@
         <!--bootstrap-->
         <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
-
-
         <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <script type="text/javascript" src="js/jquery-min.js"></script>
         <title>Hello World</title>
     </head>
     <body  id="body-div">
@@ -43,25 +42,26 @@
             </div>
             <div id="userName">
                    <form>
-                       <input type="text" name="user-Name" style="width: 134px;  margin-top: 30px; height: 47px;  margin-left:59px;">
+                       <input type="text" id="input-userName" name="user-Name" style="width: 134px;  margin-top: 30px; height: 47px;  margin-left:59px;">
                    </form>
             </div>
             <div id="inputMessageBox"/>
                 <form>
-                    <input type="text" name= "input-Box" style="width: 652px; height:87px;" >
+                    <input id="messageText" type="text" name= "input-Box" style="width: 652px; height:87px;" >
                 </form>
             </div>
            <button id="send-button" title="Send" style="height: 30px; width: 80px; margin-top: 41px;"> Send </button>
       
-        <script type="text/javascript" src="cordova.js"></script>
+        <!--script type="text/javascript" src="cordova.js"></script-->
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/gcm.js"></script>
-        <script type="text/javascript" src="plugins/com.phonegap.plugins.PushPlugin/www/PushNotification.js"></script>
+        <!--script type="text/javascript" src="plugins/com.phonegap.plugins.PushPlugin/www/PushNotification.js"></script-->
         <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
         <script src="js/crypto/aes.js"></script>
         <script type="text/javascript" src='js/dao.js'></script>
         <script type="text/javascript">
             app.initialize();
+            $(document).ready(onReady);
         </script>
     </body>
 </html>

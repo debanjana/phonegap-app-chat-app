@@ -54,7 +54,7 @@ body-div {
 }
 
 #chatboxView { 
-    background-color: gray;
+    /*background-color: gray;*/
     height: 400px;
     width: 100%;
 }

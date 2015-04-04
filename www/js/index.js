@@ -33,7 +33,8 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        app.receivedEvent('deviceready');
+        //app.receivedEvent('deviceready');
+        onReady();
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -46,4 +47,29 @@ var app = {
 
         console.log('Received Event: ' + id);
     }
+
+
 };
+
+var onReady = function(){
+     $("#send-button").click(onMessageSend);
+     set_database();
+     sync_messages();
+     console.log("device is now ************************");
+};
+
+var onMessageSend = function (){
+    //on Send button click
+    var message = $("#messageText").val();
+    var userName = $("#input-userName").val();
+    console.log("inside onMessageSend");
+    send_message(userName , message);
+}
+
+var update_chat_div = function( message ){
+    console.log("Adding new messahe to the ALL MESSAGES div");
+    var newDivObj = document.createElement('div');
+    $(newDivObj).attr("class" , "newMessage");
+    $(newDivObj).html(message);
+    $("#chatboxView").append(newDivObj);
+}

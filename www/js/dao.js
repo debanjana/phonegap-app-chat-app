@@ -1,4 +1,10 @@
-var myDataRef = new Firebase('https://sbose78.firebaseio.com/'); //https://efddaqye3pd.firebaseio-demo.com/');
+var myDataRef =  null ;//new Firebase('https://sbose78.firebaseio.com/'); //https://efddaqye3pd.firebaseio-demo.com/');
+
+var set_database = function(){
+
+    myDataRef = new Firebase('https://sbose78.firebaseio.com/'); //https://efddaqye3pd.firebaseio-demo.com/');
+
+}
 
 var send_message = function( user, text ){
 	//myDataRef.set('User ' + user + ' says ' + message);
@@ -9,15 +15,19 @@ var send_message = function( user, text ){
 };
 
 
-myDataRef.on('child_added', function(snapshot) {
-  	var message = snapshot.val();
-  	text = decrypt_message( message.text );
-	displayChatMessage(message.name, text);
-});
+var sync_messages = function(){
+
+    myDataRef.on('child_added', function(snapshot) {
+      	var message = snapshot.val();
+      	text = decrypt_message( message.text );
+    	displayChatMessage(message.name, text);
+    });
+}
 
 
 var displayChatMessage = function(name,text){
 	console.log( "Recieved chat message !! " + name + " : " + text);
+    update_chat_div( name + " " + text );
 };
 
 var SECRET_PASSPHRASE = "8884314202" ;
