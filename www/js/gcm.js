@@ -1,5 +1,6 @@
 
 var register_gcm = function (){
+	console.log( "registering gcm")
 	var pushNotification = window.plugins.pushNotification;   
 	pushNotification.register( 
 		successHandler, 
@@ -36,7 +37,7 @@ function onNotificationGCM(e)
 				alert('The room temperature is set too high') 
 			} 
 			break;
-	    case 'error': 
+ 	    case 'error': 
 	    	console.log('Error: ' + e.msg); 
 	    	break;   
 	    default: 

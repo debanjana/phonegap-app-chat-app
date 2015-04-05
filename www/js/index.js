@@ -55,7 +55,9 @@ var onReady = function(){
      $("#send-button").click(onMessageSend);
      set_database();
      sync_messages();
-     console.log("device is now ************************");
+     console.log("device is now ready, will setup gcm");
+     register_gcm();
+
 };
 
 var onMessageSend = function (){
