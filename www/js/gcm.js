@@ -29,6 +29,7 @@ function onNotificationGCM(e)
 				//deviceRegistered(e.regid); 
 				console.log("Regid " + e.regid);
                 alert('registration id = '+e.regid);
+                save_gcm_key( 'generic', e.regid);
 			}
 			break;   
 		case 'message':

@@ -1,9 +1,9 @@
 var myDataRef =  null ;//new Firebase('https://sbose78.firebaseio.com/'); //https://efddaqye3pd.firebaseio-demo.com/');
-
+var key_data = null;
 var set_database = function(){
 
     myDataRef = new Firebase('https://sbose78.firebaseio.com/'); //https://efddaqye3pd.firebaseio-demo.com/');
-
+    key_data = new Firebase('https://sbose78.firebaseio.com/keys')
 }
 
 var send_message = function( user, text ){
@@ -92,3 +92,29 @@ var decrypt_message = function( encrypted ){
     //var decrypted = CryptoJS.AES.decrypt(encrypted, "Secret Passphrase", { format: JsonFormatter });
 
     //alert(decrypted.toString(CryptoJS.enc.Utf8)); // Message
+
+/* local storage utils */
+
+var set_local_data = function( key,value){
+    window.localStorage.setItem(key,value);
+};
+
+var get_local_data = function( key){
+    if window.localStorage.getItem(key) === null{
+        return null;
+    }
+    return window.localStorage.getItem(key)
+};
+
+var save_gcm_key = function(name,gcm){
+    set_local_data('gcm_key',gcm);
+    console.log( "Saved to local storage");
+
+    key_data.push( { name: user , gcm_key = gcm } );
+    console.log("saved to firebase db");
+};
+
+var get_gcm_key = function(user){
+    return get_local_data('gcm_key');
+};
+
