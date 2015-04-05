@@ -40,9 +40,11 @@ function onNotificationGCM(e)
 			break;
  	    case 'error': 
 	    	console.log('Error: ' + e.msg); 
+	    	alert("error was returned - " + e.msg)
 	    	break;   
 	    default: 
 	    	console.log('An unknown event was received'); 
+	    	alert( e.message );
 	    	break; 
 	} 
 }
