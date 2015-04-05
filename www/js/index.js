@@ -56,9 +56,9 @@ var onReady = function(){
      set_database();
      sync_messages();
      console.log("device is now ready, will setup gcm");
-     if ( get_gcm_key() === null ){
+     //if ( get_gcm_key('generic') === null ){
         register_gcm();
-     }
+     //}
      
 
 };

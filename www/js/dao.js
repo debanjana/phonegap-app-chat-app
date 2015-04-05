@@ -106,7 +106,7 @@ var get_local_data = function( key){
     return window.localStorage.getItem(key)
 };
 
-var save_gcm_key = function(name,gcm){
+var save_gcm_key = function(user,gcm){
     set_local_data('gcm_key',gcm);
     console.log( "Saved to local storage");
 
