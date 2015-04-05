@@ -82,6 +82,7 @@
     <gap:plugin name="org.apache.cordova.vibration" />
     <gap:plugin name="com.phonegap.plugins.pushplugin" />
 
+
     <!-- Third party plugins -->
     <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->
     <!--
