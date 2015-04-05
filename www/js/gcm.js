@@ -4,7 +4,7 @@ var register_gcm = function (){
 	pushNotification.register( 
 		successHandler, 
 		errorHandler, 
-		{   'senderID':'your_sender_id', 
+		{   'senderID':'857748051873', 
 			'ecb':'onNotificationGCM' // callback function 
 		} 
 	);
@@ -25,7 +25,9 @@ function onNotificationGCM(e)
 	switch(e.event){ 
 		case 'registered': 
 			if (e.regid.length > 0){ 
-				deviceRegistered(e.regid); 
+				//deviceRegistered(e.regid); 
+				console.log("Regid " + e.regid);
+                alert('registration id = '+e.regid);
 			}
 			break;   
 		case 'message':
