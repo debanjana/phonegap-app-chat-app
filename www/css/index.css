@@ -57,6 +57,7 @@ body-div {
     /*background-color: gray;*/
     height: 400px;
     width: 100%;
+    overflow-y: scroll
 }
 #userName{
     /*background-color: red;*/

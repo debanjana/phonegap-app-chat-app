@@ -62,14 +62,32 @@ var onMessageSend = function (){
     //on Send button click
     var message = $("#messageText").val();
     var userName = $("#input-userName").val();
-    console.log("inside onMessageSend");
+    userName = userName.toUpperCase();
+    userName = userName.bold();
+    //console.log("inside onMessageSend");
     send_message(userName , message);
 }
-
-var update_chat_div = function( message ){
+var update_chat_div = function( user, message ){
     console.log("Adding new messahe to the ALL MESSAGES div");
     var newDivObj = document.createElement('div');
+    var leng = message.length; 
+    var divwidth = leng*8;
+    var divColor = getColorByUser(user);
+    $(newDivObj).attr("style" , "background-color : "+divColor);
+    $(newDivObj).attr("style" , "padding : 1px ; margin : 10px; width: "+divwidth+"px; margin-left : 7px" );
     $(newDivObj).attr("class" , "newMessage");
     $(newDivObj).html(message);
     $("#chatboxView").append(newDivObj);
-}
+
+  };
+
+  var getColorByUser = function(user){
+
+        var colorByUser = {};
+        colorByUser["Shoubhik"] = "rgb(0,102,204)";
+        colorByUser["Debanjana"] = "rgb(204,0,102)";
+        return colorByUser[user];
+
+};
+
+

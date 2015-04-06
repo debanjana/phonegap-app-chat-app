@@ -27,7 +27,7 @@ var sync_messages = function(){
 
 var displayChatMessage = function(name,text){
 	console.log( "Recieved chat message !! " + name + " : " + text);
-    update_chat_div( name + " " + text );
+    update_chat_div(name ,  text );
 };
 
 var SECRET_PASSPHRASE = "8884314202" ;
