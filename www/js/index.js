@@ -68,31 +68,36 @@ var onMessageSend = function (){
     //on Send button click
     var message = $("#messageText").val();
     var userName = $("#input-userName").val();
-    userName = userName.toUpperCase();
-    userName = userName.bold();
+    //userName = userName.toUpperCase();
+    //userName = userName.bold();
     //console.log("inside onMessageSend");
     send_message(userName , message);
 }
 var update_chat_div = function( user, message ){
     console.log("Adding new messahe to the ALL MESSAGES div");
     var newDivObj = document.createElement('div');
-    var leng = message.length; 
-    var divwidth = leng*8;
+    var fullmessage = user +  " : " + message;
+    var leng = fullmessage.length; 
+    var divwidth = leng*10;
     var divColor = getColorByUser(user);
-    $(newDivObj).attr("style" , "background-color : "+divColor);
-    $(newDivObj).attr("style" , "padding : 1px ; margin : 10px; width: "+divwidth+"px; margin-left : 7px" );
+    $(newDivObj).attr("style" , " background-color : "+divColor+"; padding : 14px ; margin : 10px; font-size: 18px; color : white ;  border-radius: 27px; width: "+divwidth+"px; margin-left : 74px" );
     $(newDivObj).attr("class" , "newMessage");
-    $(newDivObj).html(message);
+    $(newDivObj).html(fullmessage);
     $("#chatboxView").append(newDivObj);
+
+
+  
 
   };
 
   var getColorByUser = function(user){
-
+        var userSmall = user.toLowerCase();
+        console.log(userSmall);
         var colorByUser = {};
-        colorByUser["Shoubhik"] = "rgb(0,102,204)";
-        colorByUser["Debanjana"] = "rgb(204,0,102)";
-        return colorByUser[user];
+        colorByUser["shoubhik"] = "rgb(31,192,226)";
+        colorByUser["debanjana"] = "rgb(253,96,103)";
+
+        return colorByUser[userSmall];
 
 };
 
