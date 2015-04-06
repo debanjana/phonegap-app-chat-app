@@ -85,8 +85,10 @@ var update_chat_div = function( user, message ){
     $(newDivObj).html(fullmessage);
     $("#chatboxView").append(newDivObj);
 
+    // scroll down to the last message after appending child
+    var $cont = $("#chatboxView");
+    $cont[0].scrollTop = $cont[0].scrollHeight;
 
-  
 
   };
 
