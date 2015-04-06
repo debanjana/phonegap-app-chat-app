@@ -72,6 +72,7 @@ var onMessageSend = function (){
     //userName = userName.bold();
     //console.log("inside onMessageSend");
     send_message(userName , message);
+    $("#messageText").val("");
 }
 var update_chat_div = function( user, message ){
     console.log("Adding new messahe to the ALL MESSAGES div");
@@ -84,7 +85,7 @@ var update_chat_div = function( user, message ){
     $(newDivObj).attr("class" , "newMessage");
     $(newDivObj).html(fullmessage);
     $("#chatboxView").append(newDivObj);
-
+    $("#chatboxView").scrollTop = $("#chatboxView").scrollHeight;
 
   
 

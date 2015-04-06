@@ -29,6 +29,7 @@ body-div {
     margin:0%;
     padding:0%;
     width:100%;
+     /* 170px x 200px */
 }
 
 /* Portrait layout (default) */
@@ -51,6 +52,10 @@ body-div {
           /* offset vertical: half of image height */
                                       /* offset horizontal: half of image width and text area width */
     }
+}
+
+.container-fluid {
+background:url(../img/background.jpg)  center top;
 }
 
 #chatboxView { 
