@@ -33,7 +33,7 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        //app.receivedEvent('deviceready');
+        app.receivedEvent('deviceready');
         onReady();
     },
     // Update DOM on a Received Event
@@ -55,7 +55,13 @@ var onReady = function(){
      $("#send-button").click(onMessageSend);
      set_database();
      sync_messages();
-     console.log("device is now ************************");
+     console.log("device is now ready, will setup gcm");
+     if ( get_gcm_key('generic') === null ){
+        alert("Registering GCM since reg id wasn't found on device");
+        register_gcm();
+     }
+     
+
 };
 
 var onMessageSend = function (){
