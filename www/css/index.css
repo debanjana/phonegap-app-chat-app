@@ -60,7 +60,7 @@ background:url(../img/background.jpg)  center top;
 
 #chatboxView { 
     /*background-color: gray;*/
-    height: 400px;
+    height: 800px;
     width: 100%;
     overflow-y: scroll
 }
