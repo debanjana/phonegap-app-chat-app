@@ -35,7 +35,7 @@ function onNotificationGCM(e)
 		case 'message':
 			if (e.foreground){
 				 // When the app is running foreground. 
-				alert('The room temperature is set too high') 
+				//alert('The room temperature is set too high') 
 			} 
 			break;
  	    case 'error': 

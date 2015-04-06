@@ -56,9 +56,10 @@ var onReady = function(){
      set_database();
      sync_messages();
      console.log("device is now ready, will setup gcm");
-     //if ( get_gcm_key('generic') === null ){
+     if ( get_gcm_key('generic') === null ){
+        alert("Registering GCM since reg id wasn't found on device");
         register_gcm();
-     //}
+     }
      
 
 };
