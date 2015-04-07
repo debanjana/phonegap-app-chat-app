@@ -7,4 +7,5 @@ Enhancement list
 - Add configurability to notifications.
 - Notifications of new app versions whenever we update the git repo.
 - Ability to add images. ( shouldnt be difficiult, wise use of base64 encoding )
-- Optionally Show/Hide the "name" file
+- Optionally Show/Hide the "name" file.
+- If device is not connected to the internet, then deliver an SMS.
