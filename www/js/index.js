@@ -79,9 +79,32 @@ var update_chat_div = function( user, message ){
     var newDivObj = document.createElement('div');
     var fullmessage = user +  " : " + message;
     var leng = fullmessage.length; 
-    var divwidth = leng*10;
+
+    // if length is more than ...... then split and make two messages 
+
+   /* 
+    if(leng>40)
+        {
+        var divmessage = ' ';
+        for(var i = 0 ; i<leng ; i++)
+        {
+            if((i%40)==0)
+            {
+                divmessage = divmessage + "<br>";
+            }
+            divmessage = divmessage + fullmessage[i];
+        }
+        fullmessage = divmessage;
+        divwidth=360;
+       }*/
+       if(leng>40)        
+            var divwidth = 400;        
+        else
+            var divwidth = leng*9;
+
+    
     var divColor = getColorByUser(user);
-    $(newDivObj).attr("style" , " background-color : "+divColor+"; padding : 14px ; margin : 10px; font-size: 18px; color : white ;  border-radius: 27px; width: "+divwidth+"px; margin-left : 74px" );
+    $(newDivObj).attr("style" , " background-color : "+divColor+";  width: "+divwidth+"px;"  );
     $(newDivObj).attr("class" , "newMessage");
     $(newDivObj).html(fullmessage);
     $("#chatboxView").append(newDivObj);

@@ -18,17 +18,19 @@
  */
 
 
-body-div {
+#mydiv {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
     
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
     font-size:12px;
-    height:100%;
     margin:0%;
     padding:0%;
     width:100%;
+    overflow-y: hidden; 
+    height: 100%;
+    background: url(../img/background.jpg) center top;
      /* 170px x 200px */
 }
 
@@ -54,13 +56,14 @@ body-div {
     }
 }
 
-.container-fluid {
-background:url(../img/background.jpg)  center top;
+#container-fluid {
+    height: 100%
+/*background:url(../img/background.jpg)  center top;*/
 }
 
 #chatboxView { 
     /*background-color: gray;*/
-    height: 800px;
+    height: 450px;
     width: 100%;
     overflow-y: scroll
 }
@@ -126,6 +129,16 @@ h1 {
     from { opacity: 1.0; }
     50% { opacity: 0.4; }
     to { opacity: 1.0; }
+}
+
+.newMessage{
+word-wrap: break-word;
+padding : 14px ;
+ margin : 10px;
+font-size: 18px;
+color : white ;
+border-radius: 27px;
+margin-left : 74px;
 }
  
 .blink {
