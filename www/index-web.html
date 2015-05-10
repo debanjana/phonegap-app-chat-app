@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <!--bootstrap-->
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">        
+        <script type="text/javascript" src="js/jquery-min.js"></script>
+        <script type="text/javascript" src="bootstrap/css/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Goppo</title>
+    </head>
+    <body id="mydiv">
+        
+            <div id="container-fluid">
+       
+                        <h1>Goppo</h1>
+                        
+                        <div  id="chatboxView"></div>
+                               
+                        
+                        <div id="inputSection" >
+                        
+                                    <div id="userName">
+                                                   <form>
+                                                       <input type="text" id="input-userName" name="user-Name" style="width: 134px;  margin-top: 30px; height: 47px;  margin-left:59px;">
+                                                   </form>
+                                    </div>
+                                    <div id="inputMessageBox">
+                                                <form>
+                                                    <input id="messageText" type="text" name= "input-Box" style="width: 652px; height:87px;" >
+                                                </form>
+                                    </div>
+
+                                    <button id="send-button" title="Send" style="height: 30px; width: 80px; margin-top: 41px;"> Send </button>
+                        </div>
+                </div>
+            
+                  
+
+
+            <script type="text/javascript" src="cordova.js"></script>
+            <script type="text/javascript" src="js/index.js"></script>
+            <script type="text/javascript" src="js/gcm.js"></script>
+            <script type="text/javascript" src="PushNotification.js"></script>
+            <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+            <script src="js/crypto/aes.js"></script>
+            <script type="text/javascript" src='js/dao.js'></script>
+            <script type="text/javascript">
+                app.initialize();
+                $(document).ready(onReady);
+            </script>
+
+    </body>            
+</html>

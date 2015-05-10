@@ -34,31 +34,38 @@
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Goppo</title>
     </head>
-    <body id="mydiv">
-        
-            <div id="container-fluid">
-       
-                        <h1>Goppo</h1>
-                        
-                        <div  id="chatboxView"></div>
-                               
-                        
-                        <div id="inputSection">
-                        
-                                    <div id="userName">
-                                                   <form>
-                                                       <input type="text" id="input-userName" name="user-Name" style="width: 134px;  margin-top: 30px; height: 47px;  margin-left:59px;">
-                                                   </form>
-                                    </div>
-                                    <div id="inputMessageBox">
-                                                <form>
-                                                    <input id="messageText" type="text" name= "input-Box" style="width: 652px; height:87px;" >
-                                                </form>
-                                    </div>
+    <body>
+        <div class="container-fluid">
+                 
+            <div class="row mydiv">
+                 <div class="col-xs-12 col-md-12 ">
+                    <div class ="row" >       
+                        <h1 >Goppo</h1>
+                     </div>
+                  </div>   
 
-                                    <button id="send-button" title="Send" style="height: 30px; width: 80px; margin-top: 41px;"> Send </button>
+
+
+                    <div class="row messageBox" >    
+                        <div class="col-xs-6 col-md-2" id="chatboxView" ></div>
+                     </div>          
+                        
+
+
+                      <div class="row inputSection">
+                                                   
+                                <input class="col-xs-4 col-md-4" type="text" id="input-userName" name="user-Name" >
+                                                                                               
+                                   
+                                <input class="col-xs-4 col-md-6" id="messageText" type="text" name= "input-Box"  >
+                               
+
+                                <button class="col-xs-4 col-md-4" id="send-button" title="Send" > Send </button>
                         </div>
-                </div>
+                      </div> 
+             </div>
+        </div>
+        
             
                   
 

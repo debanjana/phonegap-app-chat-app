@@ -113,7 +113,8 @@ var update_chat_div = function( user, message ){
 
     
     var divColor = getColorByUser(user);
-    $(newDivObj).attr("style" , " background-color : "+divColor+";  width: "+divwidth+"px;"  );
+   // $(newDivObj).attr("style" , " background-color : "+divColor+";  width: "+divwidth+"px;"  );
+    $(newDivObj).attr("style" , " background-color : "+divColor+";"  );
     $(newDivObj).attr("class" , "newMessage");
     $(newDivObj).html(fullmessage);
     $("#chatboxView").append(newDivObj);
